@@ -2,11 +2,12 @@ using System.Threading.Tasks;
 using System.Collections.Generic;
 using Microsoft.EntityFrameworkCore;
 
-using Domain;
-using Persistence;
-using Persistence.Contracts;
+using leave_management.LeaveRequestProject.Domain;
+using leave_management.LeaveRequestProject.Persistence;
+using leave_management.LeaveRequestProject.Persistence.Repositories;
+using leave_management.LeaveRequestProject.Persistence.Repositories.Interfaces;
 
-namespace Persistence.Repositories;
+namespace leave_management.LeaveRequestProject.Persistence.Repositories;
 
 public class LeaveRequestRepository : GenericRepository<LeaveRequest>, ILeaveRequestRepository
 {

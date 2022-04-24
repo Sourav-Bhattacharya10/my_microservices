@@ -1,9 +1,9 @@
 using FluentValidation;
 
-using Application.DTOs.LeaveRequest;
-using Persistence.Contracts;
+using leave_management.LeaveRequestProject.Application.DTOs.LeaveRequest;
+using leave_management.LeaveRequestProject.Persistence.Repositories.Interfaces;
 
-namespace Application.DTOs.LeaveRequest.Validators;
+namespace leave_management.LeaveRequestProject.Application.DTOs.LeaveRequest.Validators;
 
 public class ILeaveRequestDtoValidator : AbstractValidator<ILeaveRequestDto>
 {

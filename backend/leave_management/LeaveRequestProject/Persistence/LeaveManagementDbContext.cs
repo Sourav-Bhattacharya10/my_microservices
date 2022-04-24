@@ -3,10 +3,10 @@ using System.Threading;
 using System.Threading.Tasks;
 using Microsoft.EntityFrameworkCore;
 
-using Domain;
-using Domain.Common;
+using leave_management.LeaveRequestProject.Domain;
+using leave_management.LeaveRequestProject.Domain.Common;
 
-namespace Persistence;
+namespace leave_management.LeaveRequestProject.Persistence;
 
 public class LeaveManagementDbContext : DbContext
 {
@@ -33,8 +33,5 @@ public class LeaveManagementDbContext : DbContext
 
         return base.SaveChangesAsync(cancellationToken);
     }
-
-    public DbSet<LeaveType> LeaveTypes { get; set; } = default!;
     public DbSet<LeaveRequest> LeaveRequests { get; set; } = default!;
-    public DbSet<LeaveAllocation> LeaveAllocations { get; set; } = default!;
 }

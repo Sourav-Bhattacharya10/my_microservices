@@ -5,10 +5,11 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Data.SqlClient;
 
-using Persistence.Contracts;
-using Persistence.Repositories;
+using leave_management.LeaveRequestProject.Persistence.Contracts;
+using leave_management.LeaveRequestProject.Persistence.Repositories;
+using leave_management.LeaveRequestProject.Persistence.Repositories.Interfaces;
 
-namespace Persistence;
+namespace leave_management.LeaveRequestProject.Persistence;
 
 public static class PersistenceServicesRegistration
 {
@@ -30,7 +31,6 @@ public static class PersistenceServicesRegistration
         services.AddScoped<IUnitOfWork, UnitOfWork>();
         services.AddScoped<ILeaveTypeRepository, LeaveTypeRepository>();
         services.AddScoped<ILeaveRequestRepository, LeaveRequestRepository>();
-        services.AddScoped<ILeaveAllocationRepository, LeaveAllocationRepository>();
 
         return services;
     }

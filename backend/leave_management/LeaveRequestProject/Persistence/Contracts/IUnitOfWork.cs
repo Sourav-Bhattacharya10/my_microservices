@@ -1,13 +1,14 @@
 using System;
 using System.Threading.Tasks;
 
-namespace Persistence.Contracts;
+using leave_management.LeaveRequestProject.Persistence.Repositories.Interfaces;
+
+namespace leave_management.LeaveRequestProject.Persistence.Contracts;
 
 public interface IUnitOfWork : IDisposable
 {
     ILeaveTypeRepository LeaveTypeRepository { get; }
     ILeaveRequestRepository LeaveRequestRepository { get; }
-    ILeaveAllocationRepository LeaveAllocationRepository { get; }
 
     Task SaveChangesAsync();
 }

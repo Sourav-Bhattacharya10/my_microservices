@@ -6,7 +6,6 @@ WORKDIR /source
 COPY API/*.csproj /source/API/
 COPY Application/*.csproj /source/Application/
 COPY Domain/*.csproj /source/Domain/
-COPY Infrastructure/*.csproj /source/Infrastructure/
 COPY Persistence/*.csproj /source/Persistence/
 RUN dotnet restore /source/API/API.csproj
 
@@ -14,7 +13,6 @@ RUN dotnet restore /source/API/API.csproj
 COPY API/ /source/API/
 COPY Application/ /source/Application/
 COPY Domain/ /source/Domain/
-COPY Infrastructure/ /source/Infrastructure/
 COPY Persistence/ /source/Persistence/
 WORKDIR /source/API
 RUN dotnet build -c release --no-restore
@@ -35,4 +33,5 @@ WORKDIR /app
 EXPOSE 80
 EXPOSE 443
 COPY --from=publish /app .
+# Pate ENV variables
 ENTRYPOINT ["dotnet", "API.dll"]

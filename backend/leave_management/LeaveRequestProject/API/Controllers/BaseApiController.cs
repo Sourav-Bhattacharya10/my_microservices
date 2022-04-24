@@ -2,10 +2,10 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.DependencyInjection;
 using MediatR;
 
-using Application.Responses;
-using Application.Enums;
+using leave_management.LeaveRequestProject.Application.Responses;
+using leave_management.LeaveRequestProject.Application.Enums;
 
-namespace API.Controllers;
+namespace leave_management.LeaveRequestProject.API.Controllers;
 
 [ApiController]
 [Route("api/[controller]")]

@@ -1,7 +1,7 @@
 using System.Threading.Tasks;
 using System.Collections.Generic;
 
-namespace Persistence.Contracts;
+namespace leave_management.LeaveRequestProject.Persistence.Repositories.Interfaces;
 
 public interface IGenericRepository<T> where T : class
 {
