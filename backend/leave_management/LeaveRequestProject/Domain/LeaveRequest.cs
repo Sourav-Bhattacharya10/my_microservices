@@ -1,8 +1,9 @@
 using System;
 
-using Domain.Common;
+using leave_management.LeaveRequestProject.Domain.Common;
+using leave_management.LeaveRequestProject.Domain;
 
-namespace Domain;
+namespace leave_management.LeaveRequestProject.Domain;
 
 public class LeaveRequest : BaseDomainEntity
 {

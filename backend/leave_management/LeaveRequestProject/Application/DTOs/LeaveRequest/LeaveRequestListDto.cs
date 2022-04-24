@@ -1,9 +1,9 @@
 using System;
 
-using Application.DTOs.Common;
-using Application.DTOs.LeaveType;
+using leave_management.LeaveRequestProject.Application.DTOs.Common;
+using leave_management.LeaveRequestProject.Application.DTOs.LeaveType;
 
-namespace Application.DTOs.LeaveRequest;
+namespace leave_management.LeaveRequestProject.Application.DTOs.LeaveRequest;
 
 public class LeaveRequestListDto : BaseDto
 {

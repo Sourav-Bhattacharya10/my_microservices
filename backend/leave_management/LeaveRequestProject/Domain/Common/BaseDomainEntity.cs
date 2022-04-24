@@ -1,6 +1,6 @@
 using System;
 
-namespace Domain.Common;
+namespace leave_management.LeaveRequestProject.Domain.Common;
 
 public abstract class BaseDomainEntity
 {

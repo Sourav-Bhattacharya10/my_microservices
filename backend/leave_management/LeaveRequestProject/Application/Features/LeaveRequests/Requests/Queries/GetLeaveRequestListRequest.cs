@@ -2,10 +2,10 @@ using System;
 using System.Collections.Generic;
 using MediatR;
 
-using Application.DTOs.LeaveRequest;
-using Application.Responses;
+using leave_management.LeaveRequestProject.Application.DTOs.LeaveRequest;
+using leave_management.LeaveRequestProject.Application.Responses;
 
-namespace Application.Features.LeaveRequests.Requests.Queries;
+namespace leave_management.LeaveRequestProject.Application.Features.LeaveRequests.Requests.Queries;
 
 public class GetLeaveRequestListRequest : IRequest<ResultResponse<List<LeaveRequestListDto>>>
 {

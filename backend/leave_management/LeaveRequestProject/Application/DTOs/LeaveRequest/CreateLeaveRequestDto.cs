@@ -1,6 +1,6 @@
 using System;
 
-namespace Application.DTOs.LeaveRequest;
+namespace leave_management.LeaveRequestProject.Application.DTOs.LeaveRequest;
 
 public class CreateLeaveRequestDto : ILeaveRequestDto
 {

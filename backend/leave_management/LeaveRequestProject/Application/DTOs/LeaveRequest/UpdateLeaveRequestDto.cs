@@ -1,7 +1,8 @@
 using System;
-using Application.DTOs.Common;
 
-namespace Application.DTOs.LeaveRequest;
+using leave_management.LeaveRequestProject.Application.DTOs.Common;
+
+namespace leave_management.LeaveRequestProject.Application.DTOs.LeaveRequest;
 
 public class UpdateLeaveRequestDto : BaseDto, ILeaveRequestDto
 {

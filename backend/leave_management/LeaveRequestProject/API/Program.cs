@@ -5,9 +5,8 @@ using Azure.Identity;
 using Azure.Security.KeyVault.Secrets;
 using Azure.Extensions.AspNetCore.Configuration.Secrets;
 
-using Application;
-using Persistence;
-using Infrastructure;
+using leave_management.LeaveRequestProject.Application;
+using leave_management.LeaveRequestProject.Persistence;
 
 var builder = WebApplication.CreateBuilder(args);
                             
@@ -25,7 +24,6 @@ IConfiguration configuration = builder.Configuration;
 // Add services to the container.
 builder.Services.ConfigureApplicationServices();
 builder.Services.ConfigurePersistenceServices(configuration);
-builder.Services.ConfigureInfrastructureServices(configuration);
 
 builder.Services.AddControllers()
                 .AddJsonOptions(options =>

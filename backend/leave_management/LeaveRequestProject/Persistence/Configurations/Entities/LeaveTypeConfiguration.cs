@@ -1,9 +1,9 @@
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
 
-using Domain;
+using leave_management.LeaveRequestProject.Domain;
 
-namespace Persistence.Configurations.Entities;
+namespace leave_management.LeaveRequestProject.Persistence.Configurations.Entities;
 
 public class LeaveTypeConfiguration : IEntityTypeConfiguration<LeaveType>
 {

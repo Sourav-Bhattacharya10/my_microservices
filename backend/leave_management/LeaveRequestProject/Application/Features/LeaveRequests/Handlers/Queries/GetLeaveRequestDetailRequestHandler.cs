@@ -4,16 +4,16 @@ using System.Threading.Tasks;
 using MediatR;
 using AutoMapper;
 
-using Domain;
-using Application.DTOs.LeaveRequest;
-using Application.Responses;
-using Application.Exceptions;
-using Application.Features.LeaveRequests.Requests.Queries;
-using Persistence.Contracts;
-using Application.Enums;
+using leave_management.LeaveRequestProject.Domain;
+using leave_management.LeaveRequestProject.Application.DTOs.LeaveRequest;
+using leave_management.LeaveRequestProject.Application.Responses;
+using leave_management.LeaveRequestProject.Application.Exceptions;
+using leave_management.LeaveRequestProject.Application.Features.LeaveRequests.Requests.Queries;
+using leave_management.LeaveRequestProject.Persistence.Contracts;
+using leave_management.LeaveRequestProject.Application.Enums;
 
 
-namespace Application.Features.LeaveRequests.Handlers.Queries;
+namespace leave_management.LeaveRequestProject.Application.Features.LeaveRequests.Handlers.Queries;
 
 public class GetLeaveRequestDetailRequestHandler : IRequestHandler<GetLeaveRequestDetailRequest, ResultResponse<LeaveRequestDto>>
 {

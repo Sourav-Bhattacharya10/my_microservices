@@ -1,10 +1,10 @@
 using System;
 using MediatR;
 
-using Application.DTOs.LeaveRequest;
-using Application.Responses;
+using leave_management.LeaveRequestProject.Application.DTOs.LeaveRequest;
+using leave_management.LeaveRequestProject.Application.Responses;
 
-namespace Application.Features.LeaveRequests.Requests.Commands;
+namespace leave_management.LeaveRequestProject.Application.Features.LeaveRequests.Requests.Commands;
 
 public class CreateLeaveRequestCommand : IRequest<ResultResponse<LeaveRequestDto>>
 {

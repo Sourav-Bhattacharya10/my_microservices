@@ -1,9 +1,11 @@
 using System;
 using System.Threading.Tasks;
-using Persistence;
-using Persistence.Contracts;
 
-namespace Persistence.Repositories;
+using leave_management.LeaveRequestProject.Persistence;
+using leave_management.LeaveRequestProject.Persistence.Repositories;
+using leave_management.LeaveRequestProject.Persistence.Repositories.Interfaces;
+
+namespace leave_management.LeaveRequestProject.Persistence.Contracts;
 
 public class UnitOfWork : IUnitOfWork
 {
@@ -11,11 +13,9 @@ public class UnitOfWork : IUnitOfWork
 
     private ILeaveTypeRepository _leaveTypeRepository = default!;
     private ILeaveRequestRepository _leaveRequestRepository = default!;
-    private ILeaveAllocationRepository _leaveAllocationRepository = default!;
 
     public ILeaveTypeRepository LeaveTypeRepository => _leaveTypeRepository ??= new LeaveTypeRepository(_context);
     public ILeaveRequestRepository LeaveRequestRepository => _leaveRequestRepository ??= new LeaveRequestRepository(_context);
-    public ILeaveAllocationRepository LeaveAllocationRepository => _leaveAllocationRepository ??= new LeaveAllocationRepository(_context);
 
     public UnitOfWork(LeaveManagementDbContext context)
     {

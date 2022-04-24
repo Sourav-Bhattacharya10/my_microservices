@@ -1,6 +1,6 @@
-using Application.DTOs.Common;
+using leave_management.LeaveRequestProject.Application.DTOs.Common;
 
-namespace Application.DTOs.LeaveRequest;
+namespace leave_management.LeaveRequestProject.Application.DTOs.LeaveRequest;
 
 public class ChangeLeaveRequestApprovalDto : BaseDto
 {
