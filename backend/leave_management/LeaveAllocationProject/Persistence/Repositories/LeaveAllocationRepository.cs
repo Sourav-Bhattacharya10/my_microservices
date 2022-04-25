@@ -1,3 +1,4 @@
+using System;
 using System.Threading.Tasks;
 using System.Collections.Generic;
 using Microsoft.EntityFrameworkCore;
@@ -19,19 +20,33 @@ public class LeaveAllocationRepository : GenericRepository<LeaveAllocation>, ILe
 
     public async Task<LeaveAllocation?> GetLeaveAllocationWithDetailsAsync(int id)
     {
-        var leaveAllocation = await _dbContext.LeaveAllocations
+        try
+        {
+            var leaveAllocation = await _dbContext.LeaveAllocations
                                             .Include(q => q.LeaveType)
                                             .FirstOrDefaultAsync(q => q.Id == id);
 
-        return leaveAllocation;
+            return leaveAllocation;
+        }
+        catch
+        {
+            throw new NullReferenceException("no data found");
+        }
     }
 
     public async Task<IReadOnlyList<LeaveAllocation>> GetLeaveAllocationsWithDetailsAsync()
     {
-        var leaveAllocations = await _dbContext.LeaveAllocations
+        try
+        {
+            var leaveAllocations = await _dbContext.LeaveAllocations
                                             .Include(q => q.LeaveType)
                                             .ToListAsync();
 
-        return leaveAllocations;
+            return leaveAllocations;
+        }
+        catch
+        {
+            throw new NullReferenceException("no data found");
+        }
     }
 }

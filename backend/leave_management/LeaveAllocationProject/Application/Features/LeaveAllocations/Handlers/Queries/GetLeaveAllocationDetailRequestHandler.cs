@@ -45,6 +45,10 @@ public class GetLeaveAllocationDetailRequestHandler : IRequestHandler<GetLeaveAl
         {
             result = ResultResponse<LeaveAllocationDto>.Failure(new List<string>() {ex.Message}, $"Fetch of {nameof(LeaveAllocation)} object failed as the record was not found", ErrorType.NotFound);
         }
+        catch (NullReferenceException ex)
+        {
+            result = ResultResponse<LeaveAllocationDto>.Failure(new List<string>() {ex.Message}, $"Fetch of {nameof(LeaveAllocation)} object failed as {ex.Message}", ErrorType.NotFound);
+        }
         catch (Exception ex)
         {
             result = ResultResponse<LeaveAllocationDto>.Failure(new List<string>() {ex.Message}, $"Fetch of {nameof(LeaveAllocation)} object failed", ErrorType.Database, ex);
