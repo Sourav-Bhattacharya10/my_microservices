@@ -1,6 +1,6 @@
 using System;
 
-namespace Application.Exceptions;
+namespace leave_management.LeaveAllocationProject.Application.Exceptions;
 
 public class BadRequestException : ApplicationException
 {

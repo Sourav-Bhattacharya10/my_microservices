@@ -1,4 +1,4 @@
-namespace Application.DTOs.Common;
+namespace leave_management.LeaveAllocationProject.Application.DTOs.Common;
 
 public class BaseDto
 {

@@ -1,6 +1,6 @@
 using System;
 
-namespace Application.DTOs.LeaveAllocation;
+namespace leave_management.LeaveAllocationProject.Application.DTOs.LeaveAllocation;
 
 public class CreateLeaveAllocationDto : ILeaveAllocationDto
 {

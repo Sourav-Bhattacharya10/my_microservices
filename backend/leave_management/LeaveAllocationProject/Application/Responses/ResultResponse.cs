@@ -1,9 +1,9 @@
 using System;
 using System.Collections.Generic;
 
-using Application.Enums;
+using leave_management.LeaveAllocationProject.Application.Enums;
 
-namespace Application.Responses;
+namespace leave_management.LeaveAllocationProject.Application.Responses;
 
 public class ResultResponse<T>
 {

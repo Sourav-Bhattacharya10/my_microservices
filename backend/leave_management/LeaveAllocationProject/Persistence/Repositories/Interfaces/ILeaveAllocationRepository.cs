@@ -1,9 +1,9 @@
 using System.Threading.Tasks;
 using System.Collections.Generic;
 
-using Domain;
+using leave_management.LeaveAllocationProject.Domain;
 
-namespace Persistence.Contracts;
+namespace leave_management.LeaveAllocationProject.Persistence.Repositories.Interfaces;
 
 public interface ILeaveAllocationRepository : IGenericRepository<LeaveAllocation>
 {

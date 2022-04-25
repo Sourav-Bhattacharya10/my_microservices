@@ -1,9 +1,9 @@
 using FluentValidation;
 
-using Application.DTOs.LeaveAllocation;
-using Persistence.Contracts;
+using leave_management.LeaveAllocationProject.Application.DTOs.LeaveAllocation;
+using leave_management.LeaveAllocationProject.Persistence.Repositories.Interfaces;
 
-namespace Application.DTOs.LeaveAllocation.Validators;
+namespace leave_management.LeaveAllocationProject.Application.DTOs.LeaveAllocation.Validators;
 
 public class CreateLeaveAllocationDtoValidator : AbstractValidator<CreateLeaveAllocationDto>
 {

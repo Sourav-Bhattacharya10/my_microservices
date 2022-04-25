@@ -1,10 +1,10 @@
 using System;
 using MediatR;
 
-using Application.DTOs.LeaveAllocation;
-using Application.Responses;
+using leave_management.LeaveAllocationProject.Application.DTOs.LeaveAllocation;
+using leave_management.LeaveAllocationProject.Application.Responses;
 
-namespace Application.Features.LeaveAllocations.Requests.Queries;
+namespace leave_management.LeaveAllocationProject.Application.Features.LeaveAllocations.Requests.Queries;
 
 public class GetLeaveAllocationDetailRequest : IRequest<ResultResponse<LeaveAllocationDto>>
 {

@@ -1,3 +1,5 @@
+namespace leave_management.LeaveAllocationProject.Application.DTOs.LeaveAllocation;
+
 public interface ILeaveAllocationDto
 {
     int NumberOfDays { get; set; }

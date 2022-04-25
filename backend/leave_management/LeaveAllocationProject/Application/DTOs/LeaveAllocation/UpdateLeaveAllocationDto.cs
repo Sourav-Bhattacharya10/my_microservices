@@ -1,6 +1,6 @@
-using Application.DTOs.Common;
+using leave_management.LeaveAllocationProject.Application.DTOs.Common;
 
-namespace Application.DTOs.LeaveAllocation;
+namespace leave_management.LeaveAllocationProject.Application.DTOs.LeaveAllocation;
 
 public class UpdateLeaveAllocationDto : BaseDto, ILeaveAllocationDto
 {

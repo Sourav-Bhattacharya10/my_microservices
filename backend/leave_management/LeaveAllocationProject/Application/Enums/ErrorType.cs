@@ -1,4 +1,4 @@
-namespace Application.Enums;
+namespace leave_management.LeaveAllocationProject.Application.Enums;
 
 public enum ErrorType
 {

@@ -1,4 +1,4 @@
-namespace Application.DTOs.LeaveType;
+namespace leave_management.LeaveAllocationProject.Application.DTOs.LeaveType;
 
 public interface ILeaveTypeDto
 {
