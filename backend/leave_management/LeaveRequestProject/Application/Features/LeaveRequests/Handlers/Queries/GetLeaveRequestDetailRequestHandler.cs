@@ -45,6 +45,10 @@ public class GetLeaveRequestDetailRequestHandler : IRequestHandler<GetLeaveReque
         {
             result = ResultResponse<LeaveRequestDto>.Failure(new List<string>() {ex.Message}, $"Fetch of {nameof(LeaveRequest)} object failed as the record was not found", ErrorType.NotFound);
         }
+        catch (NullReferenceException ex)
+        {
+            result = ResultResponse<LeaveRequestDto>.Failure(new List<string>() {ex.Message}, $"Fetch of {nameof(LeaveRequest)} object failed as {ex.Message}", ErrorType.NotFound);
+        }
         catch (Exception ex)
         {
             result = ResultResponse<LeaveRequestDto>.Failure(new List<string>() {ex.Message}, $"Fetch of {nameof(LeaveRequest)} object failed", ErrorType.Database, ex);

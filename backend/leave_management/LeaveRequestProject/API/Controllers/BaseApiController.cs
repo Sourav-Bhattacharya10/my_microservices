@@ -18,11 +18,11 @@ public class BaseApiController : ControllerBase
     protected ActionResult HandleResult<T>(ResultResponse<T> result)
     {
         if(result.IsSuccess && result.Value != null)
-            return Ok(result.Value);
+            return Ok(result);
         else if(!result.IsSuccess && result.ErrorType == ErrorType.NotFound)
-            return NotFound(result.Errors);
+            return NotFound(result);
         else if(!result.IsSuccess && result.ErrorType == ErrorType.Validation)
-            return BadRequest(result.Errors);
+            return BadRequest(result);
         else
             return StatusCode(500, result.ExceptionObject);
     }
