@@ -4,16 +4,16 @@ using System.Threading.Tasks;
 using MediatR;
 using AutoMapper;
 
-using Domain;
-using Application.DTOs.LeaveAllocation;
-using Application.DTOs.LeaveAllocation.Validators;
-using Application.Features.LeaveAllocations.Requests.Commands;
-using Application.Exceptions;
-using Application.Responses;
-using Persistence.Contracts;
-using Application.Enums;
+using leave_management.LeaveAllocationProject.Domain;
+using leave_management.LeaveAllocationProject.Application.DTOs.LeaveAllocation;
+using leave_management.LeaveAllocationProject.Application.DTOs.LeaveAllocation.Validators;
+using leave_management.LeaveAllocationProject.Application.Features.LeaveAllocations.Requests.Commands;
+using leave_management.LeaveAllocationProject.Application.Exceptions;
+using leave_management.LeaveAllocationProject.Application.Responses;
+using leave_management.LeaveAllocationProject.Persistence.Contracts;
+using leave_management.LeaveAllocationProject.Application.Enums;
 
-namespace Application.Features.LeaveAllocations.Handlers.Commands;
+namespace leave_management.LeaveAllocationProject.Application.Features.LeaveAllocations.Handlers.Commands;
 
 public class UpdateLeaveAllocationCommandHandler : IRequestHandler<UpdateLeaveAllocationCommand, ResultResponse<LeaveAllocationDto>>
 {

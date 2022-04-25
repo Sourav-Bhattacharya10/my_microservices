@@ -1,9 +1,9 @@
 using System;
 
-using Application.DTOs.Common;
-using Application.DTOs.LeaveType;
+using leave_management.LeaveAllocationProject.Application.DTOs.Common;
+using leave_management.LeaveAllocationProject.Application.DTOs.LeaveType;
 
-namespace Application.DTOs.LeaveAllocation;
+namespace leave_management.LeaveAllocationProject.Application.DTOs.LeaveAllocation;
 
 public class LeaveAllocationDto : BaseDto, ILeaveAllocationDto
 {

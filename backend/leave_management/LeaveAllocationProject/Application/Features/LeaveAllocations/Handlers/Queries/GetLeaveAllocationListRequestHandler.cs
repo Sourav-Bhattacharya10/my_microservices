@@ -5,15 +5,15 @@ using System.Collections.Generic;
 using MediatR;
 using AutoMapper;
 
-using Domain;
-using Application.DTOs.LeaveAllocation;
-using Application.Responses;
-using Application.Features.LeaveAllocations.Requests.Queries;
-using Persistence.Contracts;
-using Application.Enums;
+using leave_management.LeaveAllocationProject.Domain;
+using leave_management.LeaveAllocationProject.Application.DTOs.LeaveAllocation;
+using leave_management.LeaveAllocationProject.Application.Responses;
+using leave_management.LeaveAllocationProject.Application.Features.LeaveAllocations.Requests.Queries;
+using leave_management.LeaveAllocationProject.Persistence.Contracts;
+using leave_management.LeaveAllocationProject.Application.Enums;
 
 
-namespace Application.Features.LeaveAllocations.Handlers.Queries;
+namespace leave_management.LeaveAllocationProject.Application.Features.LeaveAllocations.Handlers.Queries;
 
 public class GetLeaveAllocationListRequestHandler : IRequestHandler<GetLeaveAllocationListRequest, ResultResponse<List<LeaveAllocationDto>>>
 {

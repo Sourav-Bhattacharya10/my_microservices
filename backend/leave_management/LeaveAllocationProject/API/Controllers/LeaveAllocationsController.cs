@@ -3,11 +3,11 @@ using System.Threading;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 
-using Application.DTOs.LeaveAllocation;
-using Application.Features.LeaveAllocations.Requests.Commands;
-using Application.Features.LeaveAllocations.Requests.Queries;
+using leave_management.LeaveAllocationProject.Application.DTOs.LeaveAllocation;
+using leave_management.LeaveAllocationProject.Application.Features.LeaveAllocations.Requests.Commands;
+using leave_management.LeaveAllocationProject.Application.Features.LeaveAllocations.Requests.Queries;
 
-namespace API.Controllers;
+namespace leave_management.LeaveAllocationProject.API.Controllers;
 
 public class LeaveAllocationsController : BaseApiController
 {

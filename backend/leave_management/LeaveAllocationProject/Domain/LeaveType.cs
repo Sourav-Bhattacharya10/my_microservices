@@ -1,8 +1,8 @@
 using System;
 
-using Domain.Common;
+using leave_management.LeaveAllocationProject.Domain.Common;
 
-namespace Domain;
+namespace leave_management.LeaveAllocationProject.Domain;
 
 public class LeaveType : BaseDomainEntity
 {

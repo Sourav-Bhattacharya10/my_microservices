@@ -1,9 +1,9 @@
 using MediatR;
 
-using Application.DTOs.LeaveAllocation;
-using Application.Responses;
+using leave_management.LeaveAllocationProject.Application.DTOs.LeaveAllocation;
+using leave_management.LeaveAllocationProject.Application.Responses;
 
-namespace Application.Features.LeaveAllocations.Requests.Commands;
+namespace leave_management.LeaveAllocationProject.Application.Features.LeaveAllocations.Requests.Commands;
 
 public class UpdateLeaveAllocationCommand : IRequest<ResultResponse<LeaveAllocationDto>>
 {

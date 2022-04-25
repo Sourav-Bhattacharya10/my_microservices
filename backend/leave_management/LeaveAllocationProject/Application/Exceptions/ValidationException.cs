@@ -2,7 +2,7 @@ using System;
 using System.Collections.Generic;
 using FluentValidation.Results;
 
-namespace Application.Exceptions;
+namespace leave_management.LeaveAllocationProject.Application.Exceptions;
 
 public class ValidationException : ApplicationException
 {

@@ -3,7 +3,7 @@ using System.Reflection;
 using MediatR;
 using Microsoft.Extensions.DependencyInjection;
 
-namespace Application;
+namespace leave_management.LeaveAllocationProject.Application;
 
 public static class ApplicationServicesRegistration
 {

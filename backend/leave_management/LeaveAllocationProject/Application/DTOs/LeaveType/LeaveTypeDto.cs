@@ -1,6 +1,6 @@
-using Application.DTOs.Common;
+using leave_management.LeaveAllocationProject.Application.DTOs.Common;
 
-namespace Application.DTOs.LeaveType;
+namespace leave_management.LeaveAllocationProject.Application.DTOs.LeaveType;
 
 public class LeaveTypeDto : BaseDto, ILeaveTypeDto
 {

@@ -1,6 +1,6 @@
 using System;
 
-namespace Domain.Common;
+namespace leave_management.LeaveAllocationProject.Domain.Common;
 
 public abstract class BaseDomainEntity
 {
