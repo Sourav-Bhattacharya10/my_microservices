@@ -1,3 +1,4 @@
+using System;
 using System.Threading.Tasks;
 using System.Collections.Generic;
 using Microsoft.EntityFrameworkCore;
@@ -20,20 +21,34 @@ public class LeaveRequestRepository : GenericRepository<LeaveRequest>, ILeaveReq
 
     public async Task<LeaveRequest?> GetLeaveRequestWithDetailsAsync(int id)
     {
-        var leaveRequest = await _dbContext.LeaveRequests
+        try
+        {
+            var leaveRequest = await _dbContext.LeaveRequests
                                             .Include(q => q.LeaveType)
                                             .FirstOrDefaultAsync(q => q.Id == id);
 
-        return leaveRequest;
+            return leaveRequest;
+        }
+        catch
+        {
+            throw new NullReferenceException("no data found");
+        }
     }
 
     public async Task<IReadOnlyList<LeaveRequest>> GetLeaveRequestsWithDetailsAsync()
     {
-        var leaveRequests = await _dbContext.LeaveRequests
+        try
+        {
+            var leaveRequests = await _dbContext.LeaveRequests
                                             .Include(q => q.LeaveType)
                                             .ToListAsync();
 
-        return leaveRequests;
+            return leaveRequests;
+        }
+        catch
+        {
+            throw new NullReferenceException("no data found");
+        }
     }
 
     public LeaveRequest ChangeApprovalStatus(LeaveRequest leaveRequest, bool? ApprovalStatus)
