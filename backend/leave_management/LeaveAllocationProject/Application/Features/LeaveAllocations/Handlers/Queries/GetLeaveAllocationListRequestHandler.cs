@@ -37,6 +37,10 @@ public class GetLeaveAllocationListRequestHandler : IRequestHandler<GetLeaveAllo
 
             result = ResultResponse<List<LeaveAllocationDto>>.Success(leaveAllocationsDto, $"Fetch of {nameof(LeaveAllocation)} list successful");
         }
+        catch (NullReferenceException ex)
+        {
+            result = ResultResponse<List<LeaveAllocationDto>>.Failure(new List<string>() {ex.Message}, $"Fetch of {nameof(LeaveAllocation)} list failed as {ex.Message}", ErrorType.NotFound);
+        }
         catch (Exception ex)
         {
             result = ResultResponse<List<LeaveAllocationDto>>.Failure(new List<string>() {ex.Message}, $"Fetch of {nameof(LeaveAllocation)} list failed", ErrorType.Database, ex);
