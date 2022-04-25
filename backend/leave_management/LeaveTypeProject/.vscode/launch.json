@@ -20,7 +20,10 @@
                 "pattern": "\\bNow listening on:\\s+(https?://\\S+)"
             },
             "env": {
-                "ASPNETCORE_ENVIRONMENT": "Development"
+                "ASPNETCORE_ENVIRONMENT": "Development",
+                "AZURE_TENANT_ID": "",
+                "AZURE_CLIENT_ID": "",
+                "AZURE_CLIENT_SECRET": ""
             },
             // "sourceFileMap": {
             //     "/Views": "${workspaceFolder}/Views"
