@@ -4,7 +4,7 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 
 using employee_management.Application.DTOs.Employee;
-// using employee_management.Application.Features.Employees.Requests.Commands;
+using employee_management.Application.Features.Employees.Requests.Commands;
 using employee_management.Application.Features.Employees.Requests.Queries;
 
 namespace employee_management.API.Controllers;
@@ -23,11 +23,11 @@ public class EmployeesController : BaseApiController
         return HandleResult<EmployeeDto>(await Mediator.Send(new GetEmployeeDetailRequest{ Id = id }));
     }
 
-    // [HttpPost]
-    // public async Task<IActionResult> CreateLeaveAllocation(CreateLeaveAllocationDto createLeaveAllocationDto)
-    // {
-    //     return HandleResult<LeaveAllocationDto>(await Mediator.Send(new CreateLeaveAllocationCommand{ LeaveAllocationDto = createLeaveAllocationDto }));
-    // }
+    [HttpPost]
+    public async Task<IActionResult> CreateEmployee(CreateEmployeeDto createEmployeeDto)
+    {
+        return HandleResult<EmployeeDto>(await Mediator.Send(new CreateEmployeeCommand{ EmployeeDto = createEmployeeDto }));
+    }
 
     // [HttpPut]
     // public async Task<IActionResult> UpdateLeaveAllocation(UpdateLeaveAllocationDto updateLeaveAllocationDto)

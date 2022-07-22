@@ -10,7 +10,7 @@ public class MappingProfile: Profile
     public MappingProfile()
     {
         CreateMap<Employee, EmployeeDto>().ReverseMap();
-
+        CreateMap<Employee, CreateEmployeeDto>().ReverseMap();
         // CreateMap<LeaveAllocation, LeaveAllocationDto>().ReverseMap();
         // CreateMap<LeaveAllocation, CreateLeaveAllocationDto>().ReverseMap();
         // CreateMap<LeaveAllocation, UpdateLeaveAllocationDto>().ReverseMap();
