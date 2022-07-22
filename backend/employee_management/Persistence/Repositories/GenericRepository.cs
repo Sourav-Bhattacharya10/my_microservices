@@ -28,12 +28,12 @@ public class GenericRepository<T> : IGenericRepository<T> where T : BaseDomainEn
         return await _dbContext.Collection<T>().Find(new BsonDocument()).ToListAsync();
     }
 
-    // public async Task<T> AddAsync(T entity)
-    // {
-    //     await _dbContext.Collection<T>().AddAsync(entity);
+    public async Task<T> AddAsync(T entity)
+    {
+        await _dbContext.Collection<T>().InsertOneAsync(entity);
 
-    //     return entity;
-    // }
+        return entity;
+    }
 
     // public T Update(T entity)
     // {
