@@ -5,10 +5,9 @@ using employee_management.Application.DTOs.Employee;
 
 namespace employee_management.Application.DTOs.Employee.Validators;
 
-public class CreateEmployeeDtoValidator : AbstractValidator<CreateEmployeeDto>
+public class UpdateEmployeeDtoValidator : AbstractValidator<UpdateEmployeeDto>
 {
-    public CreateEmployeeDtoValidator()
+    public UpdateEmployeeDtoValidator()
     {
-        Include(new BaseEmployeeDtoValidator());
     }
 }

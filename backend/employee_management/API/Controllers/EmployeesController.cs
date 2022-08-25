@@ -29,11 +29,11 @@ public class EmployeesController : BaseApiController
         return HandleResult<EmployeeDto>(await Mediator.Send(new CreateEmployeeCommand{ EmployeeDto = createEmployeeDto }));
     }
 
-    // [HttpPut]
-    // public async Task<IActionResult> UpdateLeaveAllocation(UpdateLeaveAllocationDto updateLeaveAllocationDto)
-    // {
-    //     return HandleResult<LeaveAllocationDto>(await Mediator.Send(new UpdateLeaveAllocationCommand{ LeaveAllocationDto = updateLeaveAllocationDto }));
-    // }
+    [HttpPut("{id}")]
+    public async Task<IActionResult> UpdateEmployee(string id, UpdateEmployeeDto updateEmployeeDto)
+    {
+        return HandleResult<EmployeeDto>(await Mediator.Send(new UpdateEmployeeCommand{ Id = id, EmployeeDto = updateEmployeeDto }));
+    }
 
     // [HttpDelete("{id}")]
     // public async Task<IActionResult> DeleteLeaveAllocation(int id)
