@@ -11,6 +11,7 @@ public class MappingProfile: Profile
     {
         CreateMap<Employee, EmployeeDto>().ReverseMap();
         CreateMap<Employee, CreateEmployeeDto>().ReverseMap();
+        CreateMap<Employee, UpdateEmployeeDto>().ReverseMap();
         // CreateMap<LeaveAllocation, LeaveAllocationDto>().ReverseMap();
         // CreateMap<LeaveAllocation, CreateLeaveAllocationDto>().ReverseMap();
         // CreateMap<LeaveAllocation, UpdateLeaveAllocationDto>().ReverseMap();

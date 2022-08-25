@@ -35,12 +35,10 @@ public class GenericRepository<T> : IGenericRepository<T> where T : BaseDomainEn
         return entity;
     }
 
-    // public T Update(T entity)
-    // {
-    //     _dbContext.Entry(entity).State = EntityState.Modified;
-
-    //     return entity;
-    // }
+    public virtual async Task<T> UpdateAsync(string id, T entity)
+    {
+        return entity;
+    }
 
     // public T Delete(T entity)
     // {

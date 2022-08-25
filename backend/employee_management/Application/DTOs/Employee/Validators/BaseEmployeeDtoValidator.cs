@@ -5,10 +5,10 @@ using employee_management.Application.DTOs.Employee;
 
 namespace employee_management.Application.DTOs.Employee.Validators;
 
-public class IEmployeeDtoValidator : AbstractValidator<IEmployeeDto>
+public class BaseEmployeeDtoValidator : AbstractValidator<IEmployeeDto>
 {
 
-    public IEmployeeDtoValidator()
+    public BaseEmployeeDtoValidator()
     {
         RuleFor(p => p.Name)
             .NotEmpty().WithMessage("{PropertyName} is required")
