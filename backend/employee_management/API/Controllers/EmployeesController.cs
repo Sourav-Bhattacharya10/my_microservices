@@ -35,9 +35,9 @@ public class EmployeesController : BaseApiController
         return HandleResult<EmployeeDto>(await Mediator.Send(new UpdateEmployeeCommand{ Id = id, EmployeeDto = updateEmployeeDto }));
     }
 
-    // [HttpDelete("{id}")]
-    // public async Task<IActionResult> DeleteLeaveAllocation(int id)
-    // {
-    //     return HandleResult<LeaveAllocationDto>(await Mediator.Send(new DeleteLeaveAllocationCommand{ Id = id }));
-    // }
+    [HttpDelete("{id}")]
+    public async Task<IActionResult> DeleteEmployee(string id)
+    {
+        return HandleResult<EmployeeDto>(await Mediator.Send(new DeleteCommand{ Id = id }));
+    }
 }

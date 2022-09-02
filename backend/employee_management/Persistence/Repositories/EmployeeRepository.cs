@@ -35,4 +35,18 @@ public class EmployeeRepository : GenericRepository<Employee>, IEmployeeReposito
 
         return entity;
     }
+
+    public async Task<DeleteResult> DeleteAsync(string id)
+    {
+        var filter = Builders<Employee>.Filter.Eq("_id", id);
+
+        var deleteResult = await _dbContext.Collection<Employee>().DeleteOneAsync(filter);
+
+        if(!deleteResult.IsAcknowledged)
+        {
+            throw new Exception("Unable to delete the document");
+        }
+
+        return deleteResult;
+    }
 }
